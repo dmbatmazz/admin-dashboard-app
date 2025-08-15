@@ -1,0 +1,238 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 100vh;
+  background-color: var(--sidebar-bg);
+  color: var(--text);
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-section li a {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  color: var(--text);
+  font-size: 1.15rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.3s;
+}
+
+.sidebar-section li a:hover {
+  background-color: #34496f; /* Bu renk sabit kalabilir, opsiyonel */
+  color: white;
+}
+
+.sidebar-section li a .icon {
+  margin-right: 12px;
+  font-size: 1.3rem;
+  color: var(--text);
+}
+
+.sidebar-section h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #9cb4e0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 15px;
+  padding-top: 20px;
+}
+
+.sidebar .admin-info {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .admin-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 18px;
+}
+
+.sidebar .admin-info .admin-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.sidebar .admin-info .admin-role {
+  font-size: 1.15rem;
+  color: #a3b1c2;
+}
+
+/* Nav styling */
+.sidebar nav {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.sidebar nav h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: #7a8bbf;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sidebar nav .nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.25rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease, color 0.3s;
+}
+
+.sidebar nav a:hover {
+  background-color: #3a4a7d;
+  transform: translateX(5px);
+  color: white;
+}
+
+.sidebar nav a .icon {
+  margin-right: 16px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  color: var(--text);
+}
+
+.sidebar-header p {
+  padding-bottom: 40px;
+}
+
+.sidebar-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-icon-wrapper {
+  background-color: #3a4a7d;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-icon {
+  color: white;
+  width: 32px;
+  height: 32px;
+  stroke-width: 2.2;
+}
+
+.admin-text .admin-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 0px;
+  padding-left: 30px;
+  color: var(--text);
+}
+
+.admin-text .admin-role {
+  font-size: 0.5rem;
+  color: #a3b1c2;
+  padding-bottom: 0px;
+  padding-left: 30px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 320px; /* sidebar genişliği kadar */
+  width: calc(100% - 320px);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.logout-modal {
+  background-color: var(--sidebar-bg);
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  color: var(--text);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.logout-modal p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal-buttons .confirm {
+  background-color: #e74c3c;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-buttons .cancel {
+  background-color: #3498db;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-buttons button:hover {
+  opacity: 0.9;
+}
+
+/* Tema değişkenleri */
+
+:root {
+  --bg: #f0f4f8;
+  --text: #1e293b;
+  --sidebar-bg: #e2e8f0;
+  --topbar-bg: #cbd5e1;
+}
+
+html[data-theme='dark'] {
+  --bg: #0f172a;
+  --text: #f8fafc;
+  --sidebar-bg: #1e293b;
+  --topbar-bg: #1e293b;
+}

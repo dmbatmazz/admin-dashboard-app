@@ -1,0 +1,90 @@
+.dashboard-content {
+  padding: 2rem;
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background-color: var(--bg);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.revenue-section,
+.users-section {
+  margin-bottom: 3rem;
+}
+
+.revenue-summary {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  background-color: var(--sidebar-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 12px rgba(79, 70, 229, 0.25);
+  text-align: center;
+  min-width: 250px;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.card p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #6366f1; /* Tema bağımsız vurgulu renk */
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--sidebar-bg);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(42, 38, 121, 0.25);
+}
+
+.users-table th,
+.users-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #374151;
+  color: var(--text);
+}
+
+.users-table th {
+  background-color: var(--topbar-bg);
+  text-align: left;
+  font-weight: 600;
+}
+
+.users-table tbody tr:hover {
+  background-color: #4f46e5;
+  color: white;
+  cursor: default;
+}
+
+/* Tema değişkenleri */
+:root {
+  --bg: #f0f4f8;
+  --text: #1e293b;
+  --sidebar-bg: #e2e8f0;
+  --topbar-bg: #cbd5e1;
+}
+
+html[data-theme='dark'] {
+  --bg: #0f172a;
+  --text: #f8fafc;
+  --sidebar-bg: #1e293b;
+  --topbar-bg: #1e293b;
+}

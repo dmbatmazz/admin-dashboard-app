@@ -1,0 +1,45 @@
+
+/* Global tema renkleri */
+:root[data-theme='light'] {
+  --bg-color: #f9fafb;
+  --text-color: #111827;
+  --card-bg: #ffffff;
+  --accent: #3b82f6;
+}
+
+:root[data-theme='dark'] {
+  --bg-color: #0f172a;
+  --text-color: #f1f5f9;
+  --card-bg: #1e293b;
+  --accent: #3b82f6;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.settings-container {
+  padding: 2rem;
+  background-color: var(--card-bg);
+  max-width: 600px;
+  margin: 3rem auto;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.theme-toggle label {
+  display: block;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+input[type='radio'] {
+  margin-right: 0.5rem;
+}

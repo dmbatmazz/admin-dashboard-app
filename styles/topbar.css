@@ -1,0 +1,57 @@
+.topbar {
+  display: flex;
+  margin: 20px 20px 20px 90px;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: var(--topbar-bg);
+  border-bottom: 1px solid var(--topbar-border);
+  color: var(--topbar-text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  user-select: none;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-input {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  width: 220px;
+  transition: box-shadow 0.3s ease;
+  background-color: var(--topbar-bg);
+  color: var(--topbar-text);
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 8px var(--primary-green);
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icons > * {
+  cursor: pointer;
+  color: var(--topbar-text);
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.icons > *:hover {
+  color: var(--primary-green);
+}

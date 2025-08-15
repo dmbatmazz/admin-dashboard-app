@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.layout {
+  display: flex;
+}
+
+.main {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #3a4a7d;
+  margin-bottom: 20px;
+  background-color: var(--topbar-bg);
+  color: var(--text);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.page-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-input {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  width: 200px;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #4caf50;
+}
+
+.icons > * {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* İçerik */
+.content {
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 20px;
+  margin-left: 90px;
+  padding-top: 20px;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+/* Tema değişkenleri */
+:root {
+  --bg: #f0f4f8;
+  --text: #1e293b;
+  --sidebar-bg: #e2e8f0;
+  --topbar-bg: #cbd5e1;
+}
+
+html[data-theme='dark'] {
+  --bg: #0f172a;
+  --text: #f8fafc;
+  --sidebar-bg: #1e293b;
+  --topbar-bg: #1e293b;
+}
